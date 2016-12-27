@@ -2,7 +2,9 @@
   "name": "EsprimaPractice",
   "version": "0.0.1",
   "dependencies": {
+    "escodegen": "^1.8.1",
+    "escope": "^3.6.0",
     "esprima": "^3.1.2",
-    "escodegen": "^1.8.1"
+    "estraverse": "^4.2.0"
   }
 }
