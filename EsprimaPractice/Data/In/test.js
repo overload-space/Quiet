@@ -17,8 +17,12 @@
         }
 
         function childNode(obj) {
-            var objnext;
+            var objnext = color;
             var originobj;
+            var s = objnext;
+            s = color;
+            s = parentNode(color);
+
             if (obj.firstElementChild == null) {
                 return obj;
             }
@@ -53,13 +57,28 @@
 
         function getSibling(obj, mode) {
             var originobj = obj;
-            var objnext = iterSibling(obj, mode);
+            var objnext = obj;
+            //var objnext = iterSibling(obj, mode);
             /*  offsetHeight/ofsetWidth maybe number or undefined */
             while (!(objnext.offsetHeight > 0) || !(objnext.offsetWidth > 0)) {
-                objnext = iterSibling(objnext);
+                //objnext = iterSibling(objnext);
                 if (objnext == originobj)
                     break;
             }
+            return objnext;
+        }
+
+        function getSA(obj, mode) {
+            var originobj = obj;
+            var objnext = obj;
+            //var objnext = iterSibling(obj, mode);
+            /*  offsetHeight/ofsetWidth maybe number or undefined */
+            while (!(objnext.offsetHeight > 0) || !(objnext.offsetWidth > 0)) {
+                //objnext = iterSibling(objnext);
+                if (objnext == originobj)
+                    break;
+            }
+            color = 1;
             return objnext;
         }
     }
